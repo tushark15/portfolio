@@ -1,0 +1,9 @@
+.skillTablet {
+  background: transparent;
+  cursor: pointer;
+}
+
+.skillTablet:hover {
+  background: #198754;
+  transition: background 0.3s ease-in-out;
+}
