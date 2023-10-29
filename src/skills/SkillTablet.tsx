@@ -1,4 +1,3 @@
-import React from "react";
 import"./SkillTablet.css"
 interface SkillTabletProps {
   skill: string;

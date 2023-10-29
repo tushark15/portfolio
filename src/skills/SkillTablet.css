@@ -4,6 +4,7 @@
 }
 
 .skillTablet:hover {
-  background: #198754;
+  background: #ccc;
+  color: #000;
   transition: background 0.3s ease-in-out;
 }

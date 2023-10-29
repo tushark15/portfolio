@@ -1,11 +1,11 @@
-import React from "react";
 // import "./Hero.css";
 
 const Hero = () => {
   return (
     <section
+      id="home"
       className="d-flex justify-content-center align-items-center"
-      style={{ color: "white", margin: "100px", marginBottom:"400px"  }}
+      style={{ color: "white", marginBottom:"400px", height:"100vh"}}
     >
       <div className="d-flex flex-column gap-3 ">
         <h1 style={{fontSize:"5em"}}>Hi There👋, I'm Tushar</h1>

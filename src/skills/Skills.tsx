@@ -1,4 +1,3 @@
-import React from "react";
 import SkillTablet from "./SkillTablet";
 
 const Skills = () => {

@@ -1,12 +1,11 @@
-import { useState } from 'react'
 import Home from "./home/Home"
-import NavigationDrawer from './navigation/NavigationDrawer'
+import NavigationBar from './navigation/NavigationBar'
 
 function App() {
 
   return (
-    <div>
-      <NavigationDrawer/>
+    <div className='d-flex flex-column'>
+      <NavigationBar/>
       <Home/>
     </div>
   )

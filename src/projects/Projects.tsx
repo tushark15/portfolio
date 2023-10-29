@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectCard from "./ProjectCard";
 interface projectType {
   title: string;
@@ -14,15 +13,27 @@ const Projects = () => {
   ];
   return (
     <section
+      id="projects"
       className="d-flex flex-column justify-content-center align-items-center gap-3"
-      style={{ color: "white", margin: "100px", marginBottom: "400px" }}
+      style={{ color: "white", margin: "50px 100px", marginBottom: "400px" }}
     >
       <div
-        className="d-flex gap-3"
+        className="d-flex flex-row-reverse gap-3"
         style={{ width: "100%", marginBottom: "70px" }}
       >
-        <h3>Projects 🧑🏻‍💻</h3>
-        <hr style={{ width: "85%", marginLeft: "10px" }} />
+        <h3
+          style={{
+            fontSize: "5em",
+          }}
+        >
+          Projects<span style={{ color: "green" }}>.</span>
+        </h3>
+        <hr
+          style={{
+            width: "100%",
+            marginTop: "50px",
+          }}
+        />
       </div>
       <div
         className="d-flex flex-wrap align-items-center justify-content-center"
