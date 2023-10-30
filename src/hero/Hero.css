@@ -1,14 +1,24 @@
-.container {
-  position: relative;
-  display: flex;
-  width: 100%;
+
+.yellowButton{
+  border: 2px solid #000;
 }
 
-.intro {
-    position: absolute;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  font-size: xx-large;
+.yellowButton:hover{
+  background-color: rgba(255, 200, 61, 0.5);
+  border: 2px solid black;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.imageDiv{
+  background-image: url("../assets/displayPicture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 500px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(255, 200, 61, 0.7);
+  margin-left: 150px;
+  margin-top: -30px;
 }

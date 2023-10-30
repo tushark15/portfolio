@@ -1,10 +1,12 @@
 .skillTablet {
   background: transparent;
   cursor: pointer;
+  color: #000;
+  font-size: 1.2em;
 }
 
 .skillTablet:hover {
-  background: #ccc;
-  color: #000;
-  transition: background 0.3s ease-in-out;
+  background: #000;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
 }

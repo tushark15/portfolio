@@ -1,4 +1,6 @@
 import React from "react";
+import Reveal from "../reveal/Reveal";
+import Header from "../components/Header";
 
 const Contact = () => {
   return (
@@ -7,16 +9,38 @@ const Contact = () => {
       className="d-flex flex-column justify-content-center align-items-center gap-3"
       style={{ color: "white", margin: "100px", marginBottom: "400px" }}
     >
-      <h1 style={{fontSize: "5em"}}>
-        Contact<span style={{color: "green"}}>.</span>
-      </h1>
+      <Header>Contact</Header>
 
-      <div>
-        <p style={{fontSize: "1.5em"}}>
-          Shoot me an email if you want to connect! You can also find me on
-          Linkedin or Twitter if that's more your speed.
-        </p>
-      </div>
+      <Reveal>
+        <div className="d-flex flex-column align-items-center justify-content-center">
+          <p style={{ fontSize: "1.5em" }}>
+            Shoot me an email if you want to connect!
+          </p>
+          <p style={{ fontSize: "1.5em" }}>
+            You can also find me on
+            <a
+              href="https://www.linkedin.com/in/tushar-khandelwal-6178761b9/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#ffc83d", textDecoration: "none" }}
+            >
+              {" "}
+              Linkedin
+            </a>{" "}
+            or
+            <a
+              href="https://instagram.com/t.u.s.h.a.r15?igshid=YTQwZjQ0NmI0OA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#ffc83d", textDecoration: "none" }}
+            >
+              {" "}
+              Instagram
+            </a>{" "}
+            if that's more your speed.
+          </p>
+        </div>
+      </Reveal>
     </section>
   );
 };

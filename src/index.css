@@ -69,10 +69,29 @@ button:focus-visible {
   }
 } */
 
-body{
+body {
   background: url("./assets//background.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+
+  font-family: -apple-system, BlinkMacSystemFont
+}
+
+p {
+  font-weight: 500;
+  font-size: 1.2em;
+  line-height: 1.5;
+  color: black;
+}
+
+h1,
+h2,
+h3 {
+  color: black;
+}
+
+span {
+  color: #ffc83d;
 }
