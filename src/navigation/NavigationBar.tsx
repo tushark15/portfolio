@@ -5,35 +5,35 @@ import reactImage from "../assets/react.svg";
 import RevealUp from "../reveal/RevealUp";
 import tIcon from "../assets/tIcon.png";
 
-const NavigationBar = () => {
-  const Navlink = styled(Nav.Link)<{
-    $transition?: boolean;
-    $rotate?: Boolean;
-  }>`
-    color: #ccc;
-    font-size: 1.2em;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: auto;
-    transform: rotate(${(props) => (props.$rotate ? "90deg" : "0deg")});
-    border-radius: 10px;
+const Navlink = styled(Nav.Link)<{
+  $transition?: boolean;
+  $rotate?: Boolean;
+}>`
+  color: #ccc;
+  font-size: 1.2em;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: auto;
+  transform: rotate(${(props) => (props.$rotate ? "90deg" : "0deg")});
+  border-radius: 10px;
 
-    &:hover,
-    &:focus,
-    &:active,
-    &.active {
-      ${(props) =>
-        props.$transition &&
-        `box-shadow: 0 0 10px 0 #ffc83d !important;
-      color: #ccc !important;
-      transform: rotate(90deg) scale(1.1);
-      transition: all 0.3s;`}
-    }
-  `;
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    ${(props) =>
+      props.$transition &&
+      `box-shadow: 0 0 10px 0 #ffc83d !important;
+    color: #ccc !important;
+    transform: rotate(90deg) scale(1.1);
+    transition: all 0.3s;`}
+  }
+`;
+const NavigationBar = () => {
   return (
     <Navbar
       className="d-flex justify-content-center"

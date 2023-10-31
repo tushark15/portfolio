@@ -1,5 +1,5 @@
 import React from "react";
-import { Dropdown, DropdownItem, Image } from "react-bootstrap";
+import { Dropdown, Image } from "react-bootstrap";
 import github from "../assets/github.svg";
 import link from "../assets/link.png";
 import styled from "styled-components";
@@ -9,16 +9,16 @@ interface GithubLinkSelectorProps {
   backend?: string;
 }
 
+const DropdownItem = styled(Dropdown.Item)`
+  background-color: #1b1a21;
+  color: white;
+  &:hover {
+    background-color: #ffc83d;
+    color: black;
+    transition: all 0.3s ease-in-out;
+  }
+`;
 const GithubLinkSelector = (props: GithubLinkSelectorProps) => {
-  const DropdownItem = styled(Dropdown.Item)`
-    background-color: #1b1a21;
-    color: white;
-    &:hover {
-      background-color: #ffc83d;
-      color: black;
-      transition: all 0.3s ease-in-out;
-    }
-  `;
   return (
     <>
       {props.frontend && props.backend ? (

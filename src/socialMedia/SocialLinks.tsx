@@ -6,17 +6,17 @@ import instagram from "../assets/instagram.svg";
 import styled from "styled-components";
 import RevealUp from "../reveal/RevealUp";
 
+const Image = styled.img`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  &:hover {
+    transform: rotate(3deg) scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+`;
 const SocialLinks = () => {
-  const Image = styled.img`
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    cursor: pointer;
-    &:hover {
-      transform: rotate(3deg) scale(1.1);
-      transition: all 0.3s ease-in-out;
-    }
-  `;
   return (
     <div style={{ marginBottom: "150px" }} className="d-flex gap-2">
       <RevealUp>

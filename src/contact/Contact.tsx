@@ -14,7 +14,16 @@ const Contact = () => {
       <Reveal>
         <div className="d-flex flex-column align-items-center justify-content-center">
           <p style={{ fontSize: "1.5em" }}>
-            Shoot me an email if you want to connect!
+            Shoot me an{" "}
+            <a
+              href="mailto:tusharkhandelwal1512@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#ffc83d", textDecoration: "none" }}
+            >
+              email
+            </a>{" "}
+            if you want to connect!
           </p>
           <p style={{ fontSize: "1.5em" }}>
             You can also find me on

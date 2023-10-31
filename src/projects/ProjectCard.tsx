@@ -15,24 +15,24 @@ interface ProjectCardProps {
   backend?: string;
 }
 
+const CardImage = styled(Card.Img)`
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  translate: 0% 20%;
+  width: 90%;
+  margin: 10px auto;
+  cursor: pointer;
+
+  &:hover {
+    transform: rotate(3deg) scale(1.1);
+    translate: 0% 10%;
+    transition: all 0.3s ease-in-out;
+  }
+`;
 const ProjectCard = (props: ProjectCardProps) => {
   const [openModal, setOpenModal] = React.useState(false);
-  const CardImage = styled(Card.Img)`
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    translate: 0% 20%;
-    width: 90%;
-    margin: 10px auto;
-    cursor: pointer;
-
-    &:hover {
-      transform: rotate(3deg) scale(1.1);
-      translate: 0% 10%;
-      transition: all 0.3s ease-in-out;
-    }
-  `;
   return (
     <>
       <RevealUp>
