@@ -1,8 +1,6 @@
-import React from "react";
-import { Modal, Card, Button, Image, Dropdown } from "react-bootstrap";
+import React, {useEffect, useState} from "react";
+import { Modal, Card } from "react-bootstrap";
 import "../hero/Hero.css";
-import github from "../assets/github.svg";
-import link from "../assets/link.png";
 import styled from "styled-components";
 import GithubLinkSelector from "./GithubLinkSelector";
 
@@ -18,17 +16,32 @@ interface ProjectModalProps {
 }
 
 const ProjectModal = (props: ProjectModalProps) => {
-  
+  const MODAL = styled(Modal)`
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    font-weight: bold;
+
+  `;
+  const ModalBody = styled(Modal.Body)`
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem;
+    @media (max-width: 768px) {
+      padding: 2rem;
+      font-size: 2rem;
+    }
+  `;
+
   return (
-    <Modal
+    <MODAL
       show={props.show}
       onHide={() => props.setShowModal(false)}
       size="lg"
-      style={{
-        backgroundColor: "rgba(0,0,0,0.5)",
-        backdropFilter: "blur(5px)",
-        fontWeight: "bold",
-      }}
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
@@ -39,11 +52,7 @@ const ProjectModal = (props: ProjectModalProps) => {
           src={props.image}
         />
       </Modal.Header>
-      <Modal.Body
-        style={{
-          boxShadow: "0px 10px 10px #000",
-        }}
-        className="p-4 d-flex flex-column gap-4 align-items-center"
+      <ModalBody
       >
         <Modal.Title
           style={{
@@ -72,7 +81,10 @@ const ProjectModal = (props: ProjectModalProps) => {
         </Card.Text>
         <Card.Text className="d-flex gap-3">
           Project Links:
-          <GithubLinkSelector frontend={props.frontend} backend={props.backend} />
+          <GithubLinkSelector
+            frontend={props.frontend}
+            backend={props.backend}
+          />
         </Card.Text>
         <button
           onClick={() => props.setShowModal(false)}
@@ -80,8 +92,8 @@ const ProjectModal = (props: ProjectModalProps) => {
         >
           Close
         </button>
-      </Modal.Body>
-    </Modal>
+      </ModalBody>
+    </MODAL>
   );
 };
 

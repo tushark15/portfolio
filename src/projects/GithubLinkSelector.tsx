@@ -17,6 +17,23 @@ const DropdownItem = styled(Dropdown.Item)`
     color: black;
     transition: all 0.3s ease-in-out;
   }
+  @media (max-width: 768px) {
+    font-size: 2em;
+  }
+`;
+
+const ImageLink = styled(Image)`
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  &:hover {
+    transform: rotate(3deg) scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+  }
 `;
 const GithubLinkSelector = (props: GithubLinkSelectorProps) => {
   return (
@@ -33,7 +50,7 @@ const GithubLinkSelector = (props: GithubLinkSelectorProps) => {
               width: "fit-content",
             }}
           >
-            <Image src={github} width="30px" height="30px" />
+            <ImageLink src={github} />
           </Dropdown.Toggle>
           <Dropdown.Menu
             style={{
@@ -65,7 +82,7 @@ const GithubLinkSelector = (props: GithubLinkSelectorProps) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image src={github} width="30px" height="30px" />
+          <ImageLink src={github}/>
         </a>
       )}
       <a
@@ -74,7 +91,7 @@ const GithubLinkSelector = (props: GithubLinkSelectorProps) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Image src={link} width="30px" height="30px" />
+        <ImageLink src={link}/>
       </a>
     </>
   );

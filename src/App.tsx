@@ -4,7 +4,7 @@ import NavigationBar from './navigation/NavigationBar'
 function App() {
 
   return (
-    <div className='d-flex flex-column'>
+    <div className='d-flex flex-row'>
       <NavigationBar/>
       <Home/>
     </div>

@@ -1,6 +1,8 @@
 import SkillTablet from "./SkillTablet";
 import Reveal from "../reveal/Reveal";
 import code from "../assets/code.png";
+import "./Skills.css";
+import { Image } from "../socialMedia/SocialLinks";
 
 const Skills = () => {
   const skills = [
@@ -29,9 +31,9 @@ const Skills = () => {
       <div>
         <Reveal>
           <div className="d-flex gap-1">
-            <img style={{ width: "30px", height: "35px" }} src={code} />
+            <Image id="skillsImage" src={code} />
 
-            <h3>Skills</h3>
+            <h3 className="skillsHeading">Skills</h3>
           </div>
         </Reveal>
       </div>

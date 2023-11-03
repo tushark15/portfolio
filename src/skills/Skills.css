@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+    .skillsHeading{
+        font-size: 3rem;
+    }
+
+    #skillsImage{
+        margin-top: 10px;
+    }
+}

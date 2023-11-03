@@ -6,7 +6,7 @@ import instagram from "../assets/instagram.svg";
 import styled from "styled-components";
 import RevealUp from "../reveal/RevealUp";
 
-const Image = styled.img`
+export const Image = styled.img`
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -14,6 +14,11 @@ const Image = styled.img`
   &:hover {
     transform: rotate(3deg) scale(1.1);
     transition: all 0.3s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
   }
 `;
 const SocialLinks = () => {

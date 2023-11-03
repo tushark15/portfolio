@@ -1,9 +1,9 @@
 import React from "react";
 import { Image, Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
-import reactImage from "../assets/react.svg";
 import RevealUp from "../reveal/RevealUp";
 import tIcon from "../assets/tIcon.png";
+import "./NavigationBar.css";
 
 const Navlink = styled(Nav.Link)<{
   $transition?: boolean;
@@ -32,6 +32,14 @@ const Navlink = styled(Nav.Link)<{
     transform: rotate(90deg) scale(1.1);
     transition: all 0.3s;`}
   }
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    margin-left: 40px;
+    margin-right: -10px;
+  }
 `;
 const NavigationBar = () => {
   return (
@@ -46,7 +54,7 @@ const NavigationBar = () => {
       }}
     >
       <Nav
-        className="d-flex flex-column gap-3 align-items-center"
+        className="d-flex flex-column justify-content-start align-items-center gap-3 "
         style={{
           height: "100%",
           backgroundColor: "#1b1a21",
@@ -54,7 +62,7 @@ const NavigationBar = () => {
       >
         <RevealUp direction="left">
           <Navlink href="#home">
-            <Image src={tIcon} />
+            <Image src={tIcon} className="image" />
           </Navlink>
         </RevealUp>
         <RevealUp direction="left">

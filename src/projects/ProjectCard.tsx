@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import RevealUp from "../reveal/RevealUp";
-import { Card, Modal, Image } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import ProjectModal from "./ProjectModal";
 import GithubLinkSelector from "./GithubLinkSelector";
+import "./ProjectCard.css";
 
 interface ProjectCardProps {
   title: string;
@@ -30,7 +31,57 @@ const CardImage = styled(Card.Img)`
     translate: 0% 10%;
     transition: all 0.3s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
+
+const CARD = styled(Card)`
+  border-radius: 20px;
+  padding: 5px;
+  background-color: white;
+  border: none;
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 90%;
+    height: 50em;
+  }
+  @media (max-width: 1024px) {
+    width: 90%;
+    margin-left: 70px;
+  }
+`;
+
+const CardTitle = styled(Card.Title)`
+  color: black;
+  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    font-size: 4em;
+  }
+`;
+
+const LinkLineDiv = styled.div`
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
+
+const CardText = styled(Card.Text)`
+  color: black;
+  font-size: 1em;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+`;
+
 const ProjectCard = (props: ProjectCardProps) => {
   const [openModal, setOpenModal] = React.useState(false);
   return (
@@ -48,16 +99,7 @@ const ProjectCard = (props: ProjectCardProps) => {
         />
       </RevealUp>
       <RevealUp>
-        <Card
-          style={{
-            width: "450px",
-            height: "450px",
-            borderRadius: "20px",
-            padding: "5px",
-            backgroundColor: "white",
-            border: "none",
-          }}
-        >
+        <CARD>
           <RevealUp>
             <CardImage
               onClick={() => setOpenModal(true)}
@@ -67,21 +109,24 @@ const ProjectCard = (props: ProjectCardProps) => {
           </RevealUp>
           <Card.Body>
             <RevealUp>
-              <Card.Title style={{ color: "black" }}>{props.title}</Card.Title>
+              <CardTitle>{props.title}</CardTitle>
             </RevealUp>
-              <div className="d-flex flex-row gap-2 justify-content-center align-items-center " style={{ width:"400px"}}>
-                <hr 
-                  style={{
-                    width: "100%",
-                  }}
-                 />
-                <GithubLinkSelector frontend={props.frontend} backend={props.backend} />
-              </div>
+            <LinkLineDiv>
+              <hr
+                style={{
+                  width: "100%",
+                }}
+              />
+              <GithubLinkSelector
+                frontend={props.frontend}
+                backend={props.backend}
+              />
+            </LinkLineDiv>
             <RevealUp>
               <Card.Text className="d-flex gap-2">
                 {props.skills.map((skill) => {
                   return (
-                    <span key={skill} style={{ fontSize: "0.9em" }}>
+                    <span key={skill} className="skillSpan">
                       {skill}
                     </span>
                   );
@@ -89,12 +134,10 @@ const ProjectCard = (props: ProjectCardProps) => {
               </Card.Text>
             </RevealUp>
             <RevealUp>
-              <Card.Text style={{ color: "black", fontSize: "1em" }}>
-                {props.desc}
-              </Card.Text>
+              <CardText>{props.desc}</CardText>
             </RevealUp>
           </Card.Body>
-        </Card>
+        </CARD>
       </RevealUp>
     </>
   );

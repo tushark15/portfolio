@@ -3,9 +3,7 @@ import Reveal from "../reveal/Reveal";
 import resumeFile from "../resume/Tushar.pdf";
 import SocialLinks from "../socialMedia/SocialLinks";
 import Header from "../components/Header";
-import { Image } from "react-bootstrap";
-import displayPicture from "../assets/displayPicture.jpg";
-
+import styled from "styled-components";
 const Hero = () => {
   const handleResumeDownload = () => {
     const link = document.createElement("a");
@@ -13,26 +11,40 @@ const Hero = () => {
     link.download = "Tushar.pdf";
     link.click();
   };
+  const HeroSection = styled.section`
+    color: black;
+    margin-bottom: 200px;
+    margin-left: 150px;
+    margin-top: 25px;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    @media (max-width: 768px) {
+      margin-top: 80px;
+      margin-bottom: 0px;
+      height: 100%;
+      width: 100%;
+      font-size: 2em;
+    }
+  `;
+
+  const HeroContentDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    @media (max-width: 426px) {
+      margin-top: 400px;
+      margin-bottom: 200px;
+    }
+  `;
 
   return (
-    <section
-      id="home"
-      className="d-flex justify-content-start "
-      style={{
-        color: "black",
-        marginBottom: "200px",
-        marginLeft: "150px",
-        marginTop: "25px",
-        height: "100vh",
-      }}
-    >
+    <HeroSection id="home">
       <div>
         <SocialLinks />
         <div className="d-flex flex-row-reverse gap-5">
-          <div
-            className="imageDiv"
-          ></div>
-          <div className="d-flex flex-column gap-3 ">
+          <div className="imageDiv"></div>
+          <HeroContentDiv>
             <Reveal>
               <Header>Hi, I'm Tushar</Header>
             </Reveal>
@@ -67,10 +79,10 @@ const Hero = () => {
                 </a>
               </div>
             </Reveal>
-          </div>
+          </HeroContentDiv>
         </div>
       </div>
-    </section>
+    </HeroSection>
   );
 };
 

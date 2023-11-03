@@ -1,14 +1,28 @@
 import React from "react";
 import Reveal from "../reveal/Reveal";
 import Header from "../components/Header";
+import styled from "styled-components";
 
 const Contact = () => {
+  const ContactSection = styled.section`
+    color: white;
+    margin: 100px;
+    margin-bottom: 300px;
+    margin-top: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3;
+    @media (max-width: 768px) {
+      margin-left: 180px;
+      width: 100%;
+      font-size: 2em;
+      margin-bottom: 1200px;
+    }
+  `;
   return (
-    <section
-      id="contact"
-      className="d-flex flex-column justify-content-center align-items-center gap-3"
-      style={{ color: "white", margin: "100px", marginBottom: "400px" }}
-    >
+    <ContactSection id="contact">
       <Header>Contact</Header>
 
       <Reveal>
@@ -50,7 +64,7 @@ const Contact = () => {
           </p>
         </div>
       </Reveal>
-    </section>
+    </ContactSection>
   );
 };
 

@@ -1,0 +1,8 @@
+.skillSpan{
+    font-size: 0.9em;
+}
+@media screen and (max-width: 768px) {
+    .skillSpan{
+        font-size: 2rem;
+    }
+}

@@ -3,25 +3,54 @@ import Reveal from "../reveal/Reveal";
 import SocialLinks from "../socialMedia/SocialLinks";
 import RevealUp from "../reveal/RevealUp";
 import Header from "../components/Header";
+import styled from "styled-components";
 
 const About = () => {
+  const AboutSection = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 50px 150px;
+    margin-bottom: 200px;
+    @media (max-width: 768px) {
+      width: 100%;
+      font-size: 2rem;
+    }
+  `;
+
+  const AboutHeader = styled.div`
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+    margin-bottom: 20px;
+    color: black;
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      gap: 1rem;
+      flex-direction: column;
+    }
+  `;
+
+  const Seperator = styled.hr`
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  `;
   return (
-    <section
-      id="about"
-      className="d-flex flex-column justify -content-center align-items-center"
-      style={{ color: "white", margin: "50px 150px", marginBottom: "00px" }}
-    >
-      2
-      <div
-        className="d-flex gap-3"
-        style={{ width: "100%", marginBottom: "20px", color: "black" }}
-      >
+    <AboutSection id="about">
+      <AboutHeader>
         <Header>About</Header>
 
-        <hr style={{ width: "100%", marginTop: "50px" }} />
-      </div>
-      <div className="d-flex gap-5 ms-2 justify-content-center  ">
-        <div className="d-flex flex-column gap-3 w-50">
+        <Seperator />
+      </AboutHeader>
+      <div className="d-flex gap-5 ms-2 justify-content-center aboutContent ">
+        <div className="d-flex flex-column gap-3 w-50 aboutText">
           <Reveal>
             <p>
               Hey there, I'm Tushar, a 22-year-old explorer of the digital realm
@@ -89,7 +118,7 @@ const About = () => {
           </Reveal>
           <RevealUp>
             <p
-              style={{ color: "black", fontWeight: "500" }}
+              style={{ color: "black", fontWeight: "900" }}
               className="d-flex gap-2"
             >
               My Links - <SocialLinks />
@@ -100,7 +129,7 @@ const About = () => {
           <Skills />
         </div>
       </div>
-    </section>
+    </AboutSection>
   );
 };
 
