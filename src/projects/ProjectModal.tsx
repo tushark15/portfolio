@@ -1,4 +1,3 @@
-import React, {useEffect, useState} from "react";
 import { Modal, Card } from "react-bootstrap";
 import "../hero/Hero.css";
 import styled from "styled-components";

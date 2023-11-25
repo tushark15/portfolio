@@ -1,4 +1,3 @@
-import React from "react";
 import { Image, Nav, Navbar } from "react-bootstrap";
 import styled from "styled-components";
 import RevealUp from "../reveal/RevealUp";

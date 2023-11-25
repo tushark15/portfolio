@@ -1,4 +1,3 @@
-import React from "react";
 import { Dropdown, Image } from "react-bootstrap";
 import github from "../assets/github.svg";
 import link from "../assets/link.png";

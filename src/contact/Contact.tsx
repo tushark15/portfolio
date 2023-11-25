@@ -1,4 +1,3 @@
-import React from "react";
 import Reveal from "../reveal/Reveal";
 import Header from "../components/Header";
 import styled from "styled-components";

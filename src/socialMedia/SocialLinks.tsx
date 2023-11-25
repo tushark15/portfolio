@@ -1,4 +1,3 @@
-import React from "react";
 import github from "../assets/github.svg";
 import linkedin from "../assets/linkedin.svg";
 import mail from "../assets/mail.png";
