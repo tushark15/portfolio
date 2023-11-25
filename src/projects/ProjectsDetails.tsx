@@ -1,6 +1,6 @@
 import ohms from "../assets/ohms.png";
 import yourPlaces from "../assets/yourPlaces.png";
-import todoApi from "../assets/todoApi.png";
+import todoApi from "../assets/TodoApi.png";
 import reactLoginPage from "../assets/reactLoginPage.png";
 import photoSearch from "../assets/photoSearch.png";
 interface projectType {
