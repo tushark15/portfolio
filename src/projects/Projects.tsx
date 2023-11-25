@@ -57,6 +57,7 @@ const Projects = () => {
               largeDesc={project.largeDesc}
               frontend={project.frontend}
               backend={project.backend}
+              live={project.live}
             />
           );
         })}

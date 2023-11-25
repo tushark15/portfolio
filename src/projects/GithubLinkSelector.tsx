@@ -7,6 +7,7 @@ import styled from "styled-components";
 interface GithubLinkSelectorProps {
   frontend?: string;
   backend?: string;
+  live?: string;
 }
 
 const DropdownItem = styled(Dropdown.Item)`
@@ -82,16 +83,16 @@ const GithubLinkSelector = (props: GithubLinkSelectorProps) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <ImageLink src={github}/>
+          <ImageLink src={github} />
         </a>
       )}
       <a
-        href=""
+        href={props.live ? props.live : ""}
         style={{ color: "black" }}
         target="_blank"
         rel="noopener noreferrer"
       >
-        <ImageLink src={link}/>
+        <ImageLink src={link} />
       </a>
     </>
   );

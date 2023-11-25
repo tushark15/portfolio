@@ -4,44 +4,47 @@ import SocialLinks from "../socialMedia/SocialLinks";
 import RevealUp from "../reveal/RevealUp";
 import Header from "../components/Header";
 import styled from "styled-components";
+const AboutSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 50px 150px;
+  margin-bottom: 200px;
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 2rem;
+  }
+`;
+
+const AboutHeader = styled.div`
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  margin-bottom: 20px;
+  color: black;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    gap: 1rem;
+    flex-direction: column;
+  }
+`;
+
+const Seperator = styled.hr`
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+`;
 
 const About = () => {
-  const AboutSection = styled.section`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin: 50px 150px;
-    margin-bottom: 200px;
-    @media (max-width: 768px) {
-      width: 100%;
-      font-size: 2rem;
-    }
-  `;
-
-  const AboutHeader = styled.div`
-    display: flex;
-    gap: 3rem;
-    width: 100%;
-    margin-bottom: 20px;
-    color: black;
-    @media (max-width: 768px) {
-      font-size: 1.5rem;
-      gap: 1rem;
-      flex-direction: column;
-    }
-  `;
-
-  const Seperator = styled.hr`
-    width: 100%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    @media (max-width: 768px) {
-      margin-top: 20px;
-      margin-bottom: 20px;
-    }
-  `;
+  const dob = new Date("2000-12-15");
+  const today = new Date();
+  const age = Math.floor((today.getTime() - dob.getTime()) / 31557600000);
   return (
     <AboutSection id="about">
       <AboutHeader>
@@ -53,19 +56,20 @@ const About = () => {
         <div className="d-flex flex-column gap-3 w-50 aboutText">
           <Reveal>
             <p>
-              Hey there, I'm Tushar, a 22-year-old explorer of the digital realm
-              and a soon-to-be Full Stack Developer extraordinaire! I might not
-              have a treasure trove of work experience just yet, but what I lack
-              in experience, I make up for with boundless enthusiasm and an
-              unquenchable thirst for knowledge. 🎓💡
+              Hey there, I'm Tushar, a {age}-year-old explorer of the digital
+              realm and a soon-to-be Full Stack Developer extraordinaire! I
+              might not have a treasure trove of work experience just yet, but
+              what I lack in experience, I make up for with boundless enthusiasm
+              and an unquenchable thirst for knowledge. 🎓💡
             </p>
           </Reveal>
           <Reveal>
             <p>
-              As I cruise through the final semester of my BCA program, I'm on a
-              quest to unlock the secrets of the MERN stack – MongoDB, Express,
-              React, and Node.js. I'm your go-to guy for all things web
-              development, ready to tackle any challenge that comes my way. 💻🌐
+              As I navigate through my academic journey in the world of BCA, I'm
+              fervently exploring the depths of the MERN stack – MongoDB,
+              Express, React, and Node.js. With a keen interest in web
+              development, I'm enthusiastic about overcoming any hurdles that
+              emerge along the way. 💻🌐
             </p>
           </Reveal>
           <Reveal>

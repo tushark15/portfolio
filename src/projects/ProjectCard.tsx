@@ -14,6 +14,7 @@ interface ProjectCardProps {
   largeDesc?: string;
   frontend?: string;
   backend?: string;
+  live?: string;
 }
 
 const CardImage = styled(Card.Img)`
@@ -96,6 +97,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           largeDesc={props.largeDesc}
           frontend={props.frontend}
           backend={props.backend}
+          live={props.live}
         />
       </RevealUp>
       <RevealUp>
@@ -120,6 +122,7 @@ const ProjectCard = (props: ProjectCardProps) => {
               <GithubLinkSelector
                 frontend={props.frontend}
                 backend={props.backend}
+                live={props.live}
               />
             </LinkLineDiv>
             <RevealUp>

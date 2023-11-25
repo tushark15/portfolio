@@ -13,6 +13,7 @@ interface ProjectModalProps {
   largeDesc?: string;
   frontend?: string;
   backend?: string;
+  live?: string;
 }
 
 const ProjectModal = (props: ProjectModalProps) => {
@@ -84,6 +85,7 @@ const ProjectModal = (props: ProjectModalProps) => {
           <GithubLinkSelector
             frontend={props.frontend}
             backend={props.backend}
+            live={props.live}
           />
         </Card.Text>
         <button
