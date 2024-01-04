@@ -34,7 +34,7 @@ const SocialLinks = () => {
       </RevealUp>
       <RevealUp delay={0.3}>
         <a
-          href="https://www.linkedin.com/in/tushar-khandelwal-6178761b9/"
+          href="https://www.linkedin.com/in/tushar1512"
           target="_blank"
           rel="noopener noreferrer"
         >

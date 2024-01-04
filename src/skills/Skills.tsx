@@ -18,13 +18,18 @@ const Skills = () => {
     "TailwindCSS",
     "React-Bootstrap",
     "Material-UI",
-    "Next.js",
+    "Styled-Components",
+    "Ant-Design",
     "ExpressJs",
     "TypeScript",
     "Docker",
     "SwaggerUI",
     "Git",
     "AWS S3",
+    "Digital Ocean",
+    "Ubuntu",
+    "Nginx",
+    "Server Management",
   ];
   return (
     <>

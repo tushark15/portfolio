@@ -3,6 +3,7 @@ import yourPlaces from "../assets/yourPlaces.png";
 import todoApi from "../assets/TodoApi.png";
 import reactLoginPage from "../assets/reactLoginPage.png";
 import photoSearch from "../assets/photoSearch.png";
+import crypto from "../assets/crypto.png";
 interface projectType {
   title: string;
   img: string;
@@ -66,5 +67,15 @@ export const projects: projectType[] = [
     frontend: "https://github.com/tushark15/your_places_frontend",
     backend: "https://github.com/tushark15/your_places_backend",
     live: `${import.meta.env.VITE_APP_YP_LINK}`,
+  },
+  {
+    title: "Coinlore Crypto Table",
+    img: crypto,
+    skills: ["React - ", "Ant Design - ", "API Integration"],
+    desc: "Crafted a React-powered cryptocurrency table for seamless exploration. Features include dynamic filtering, sorting, and pagination for effortless navigation through crypto details. This responsive table offers an intuitive interface, providing users with a comprehensive tool to stay updated and engaged in the market.",
+    largeDesc:
+    "Designed and implemented a dynamic cryptocurrency table using React, offering users a seamless experience to explore and track digital assets. This feature-rich table incorporates intuitive filtering, sorting, and pagination functionalities, empowering users to efficiently navigate through a vast array of cryptocurrency details. The project showcases a responsive interface that enhances accessibility and usability, delivering a comprehensive tool for staying informed and engaged within the crypto market.",
+    frontend: "https://github.com/tushark15/coinloreTable",
+    live: `${import.meta.env.VITE_APP_CRYPTO_LINK}`,
   },
 ];
