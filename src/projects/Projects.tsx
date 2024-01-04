@@ -11,7 +11,6 @@ const Projects = () => {
     align-items: center;
     gap: 3rem;
     margin: 50px 150px;
-    margin-bottom: 200px;
     @media (max-width: 768px) {
       width: 100%;
     }
@@ -21,13 +20,26 @@ const Projects = () => {
     flex-direction: row-reverse;
     gap: 3rem;
     width: 100%;
-    margin-bottom: 70px;
     color: black;
     @media (max-width: 768px) {
       flex-direction: column;
       font-size: 2rem;
       gap: 0;
       margin-bottom: 0;
+    }
+  `;
+  const ProjectContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+    padding: 20px;
+    width: 100%;
+    gap: 1rem;
+    @media (max-width: 768px) {
+      width: 100%;
     }
   `;
   return (
@@ -42,10 +54,7 @@ const Projects = () => {
           }}
         />
       </ProjectHeader>
-      <div
-        className="d-flex flex-wrap align-items-center justify-content-center projectsContainer"
-        style={{ width: "100%", gap: "100px" }}
-      >
+      <ProjectContainer>
         {projects.map((project) => {
           return (
             <ProjectCard
@@ -61,7 +70,7 @@ const Projects = () => {
             />
           );
         })}
-      </div>
+      </ProjectContainer>
     </ProjectSection>
   );
 };

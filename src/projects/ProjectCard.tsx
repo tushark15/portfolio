@@ -45,7 +45,7 @@ const CARD = styled(Card)`
   border: none;
   width: 450px;
   height: 450px;
-  margin: 0 auto;
+  margin: 20px auto;
   @media (max-width: 768px) {
     width: 90%;
     height: 50em;
