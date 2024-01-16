@@ -52,7 +52,7 @@ const SocialLinks = () => {
       </RevealUp>
       <RevealUp delay={0.4}>
         <a
-          href="https://instagram.com/t.u.s.h.a.r15?igshid=YTQwZjQ0NmI0OA=="
+          href="https://www.instagram.com/txshxr.k?igsh=MTJwNDVvdzRtMnh2NA=="
           target="_blank"
           rel="noopener noreferrer"
         >
