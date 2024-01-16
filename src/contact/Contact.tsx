@@ -51,7 +51,7 @@ const Contact = () => {
             </a>{" "}
             or
             <a
-              href="https://instagram.com/t.u.s.h.a.r15?igshid=YTQwZjQ0NmI0OA=="
+              href="https://www.instagram.com/txshxr.k?igsh=MTJwNDVvdzRtMnh2NA=="
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#ffc83d", textDecoration: "none" }}
